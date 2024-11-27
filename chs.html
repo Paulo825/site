@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do Saber - Ciências Humanas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0e0e0;
+        }
+
+        header {
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .botao {
+            background-color: #6f4f28; /* Marrom suave */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .botao:hover {
+            background-color: #4e3629; /* Marrom mais escuro */
+        }
+
+        .descricao {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .descricao h3 {
+            text-align: center;
+        }
+
+        .descricao p {
+            text-align: center;
+        }
+
+        .botao-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .atividade-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .atividade-container .botao {
+            margin-left: 20px; /* Espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Áreas do Saber - Ciências Humanas</h1>
+        <h2>Por: Paulo Marcelo Ferreira Cerqueira</h2>
+    </header>
+
+    <table>
+        <tr>
+            <th>Área do Conhecimento</th>
+            <th>Professores</th>
+            <th>Matérias</th>
+        </tr>
+        <tr>
+            <td>Ciências Humanas</td>
+            <td>Prof. Victor, Prof. Diogo, Prof. Luiza, Prof. Tais</td>
+            <td>Geografia, Sociologia, Filosofia, História</td>
+        </tr>
+    </table>
+
+    <h2>Resumo das Matérias</h2>
+    <div class="botao-container">
+        <button class="botao" onclick="mostrarDescricao('geografia')">Saber mais sobre Geografia</button>
+        <button class="botao" onclick="mostrarDescricao('sociologia')">Saber mais sobre Sociologia</button>
+        <button class="botao" onclick="mostrarDescricao('filosofia')">Saber mais sobre Filosofia</button>
+        <button class="botao" onclick="mostrarDescricao('historia')">Saber mais sobre História</button>
+    </div>
+
+    <div class="descricao" id="geografia">
+        <h3>Geografia</h3>
+        <p>A Geografia é a ciência que estuda a relação entre o ser humano e o ambiente. Ela analisa a distribuição dos fenômenos naturais e sociais, como o relevo, o clima, a vegetação, as cidades e as dinâmicas sociais, culturais e econômicas. A Geografia busca entender como os espaços são transformados pela ação humana e como o meio ambiente influencia as sociedades.</p>
+    </div>
+
+    <div class="descricao" id="sociologia">
+        <h3>Sociologia</h3>
+        <p>A Sociologia é a ciência que investiga as estruturas e dinâmicas das sociedades humanas. Ela estuda as relações sociais, instituições, culturas, e como os indivíduos interagem dentro dessas estruturas. A Sociologia aborda questões como desigualdade social, poder, cultura, globalização e os processos que moldam as sociedades e as identidades coletivas.</p>
+    </div>
+
+    <div class="descricao" id="filosofia">
+        <h3>Filosofia</h3>
+        <p>A Filosofia é a área do conhecimento que busca refletir sobre questões fundamentais da existência humana, da ética, do conhecimento, da verdade e da realidade. A Filosofia envolve o desenvolvimento do pensamento crítico e a análise das ideias que influenciam o comportamento humano e as sociedades, explorando temas como a moralidade, a razão, o livre arbítrio e o sentido da vida.</p>
+    </div>
+
+    <div class="descricao" id="historia">
+        <h3>História</h3>
+        <p>A História é a ciência que estuda o passado da humanidade, investigando os eventos, as culturas, as ideias e as transformações sociais ao longo do tempo. Através da análise de documentos, fontes históricas e vestígios materiais, a História busca entender os processos que moldaram as sociedades e como eles influenciam o presente e o futuro.</p>
+    </div>
+
+    <h2>Atividade Favorita</h2>
+    <div class="atividade-container">
+        <button class="botao" onclick="mostrarAtividade()">Atividade Favorita</button>
+    </div>
+
+    <div class="descricao" id="atividade">
+        <h3>Discussão sobre Direitos Humanos</h3>
+        <p>Fizemos um debate sobre vários países – uma discussão rica que valoriza diferentes perspectivas e amplia o conhecimento global.
+        </p>
+    </div>
+
+    <script>
+        function mostrarDescricao(id) {
+            // Esconde todas as descrições
+            var descricoes = document.querySelectorAll('.descricao');
+            descricoes.forEach(function(descricao) {
+                descricao.style.display = "none";
+            });
+
+            // Exibe a descrição da matéria clicada
+            var descricao = document.getElementById(id);
+            if (descricao.style.display === "none" || descricao.style.display === "") {
+                descricao.style.display = "block";
+            } else {
+                descricao.style.display = "none";
+            }
+        }
+
+        function mostrarAtividade() {
+            var atividade = document.getElementById("atividade");
+            if (atividade.style.display === "none" || atividade.style.display === "") {
+                atividade.style.display = "block";
+            } else {
+                atividade.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

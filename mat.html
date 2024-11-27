@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do Saber - Matemática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0e0e0;
+        }
+
+        header {
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        /* Mudança na cor dos botões para laranja */
+        .botao {
+            background-color: #f57c00; /* Laranja vibrante */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .botao:hover {
+            background-color: #e65100; /* Laranja mais escuro ao passar o mouse */
+        }
+
+        .descricao {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .descricao h3 {
+            text-align: center;
+        }
+
+        .descricao p {
+            text-align: center;
+        }
+
+        .botao-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .atividade-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .atividade-container .botao {
+            margin-left: 20px; /* Espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Áreas do Saber - Matemática</h1>
+        <h2>Por: Paulo Marcelo Ferreira Cerqueira</h2>
+    </header>
+
+    <table>
+        <tr>
+            <th>Área do Conhecimento</th>
+            <th>Professores</th>
+            <th>Matérias</th>
+        </tr>
+        <tr>
+            <td>Matemática</td>
+            <td>Prof. Clóvis</td>
+            <td>Matemática</td>
+        </tr>
+    </table>
+
+    <h2>Resumo da Matéria</h2>
+    <div class="botao-container">
+        <button class="botao" onclick="mostrarDescricao('matematica')">Saber mais sobre Matemática</button>
+    </div>
+
+    <div class="descricao" id="matematica">
+        <h3>Matemática</h3>
+        <p>A Matemática é a ciência que estuda as quantidades, as estruturas, as mudanças e os espaços. A matéria envolve a resolução de problemas, a compreensão de operações, álgebra, geometria, cálculo e muito mais. A Matemática desenvolve o raciocínio lógico e é fundamental para diversas áreas do conhecimento.</p>
+    </div>
+
+    <h2>Atividade Favorita</h2>
+    <div class="atividade-container">
+        <button class="botao" onclick="mostrarAtividade()">Atividade Favorita</button>
+    </div>
+
+    <div class="descricao" id="atividade">
+        <h3>Prática de Problemas Matemáticos</h3>
+        <p>Fiz várias lições no GeoGebra que foram importantes – uma forma interativa de visualização e compreensão de conceitos matemáticos.</p>
+    </div>
+
+    <script>
+        function mostrarDescricao(id) {
+            // Esconde todas as descrições
+            var descricoes = document.querySelectorAll('.descricao');
+            descricoes.forEach(function(descricao) {
+                descricao.style.display = "none";
+            });
+
+            // Exibe a descrição da matéria clicada
+            var descricao = document.getElementById(id);
+            if (descricao.style.display === "none" || descricao.style.display === "") {
+                descricao.style.display = "block";
+            } else {
+                descricao.style.display = "none";
+            }
+        }
+
+        function mostrarAtividade() {
+            var atividade = document.getElementById("atividade");
+            if (atividade.style.display === "none" || atividade.style.display === "") {
+                atividade.style.display = "block";
+            } else {
+                atividade.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

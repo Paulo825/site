@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site</h1>
+        <div class="lista">
+        <nav>
+            <ul>
+                <li><a href="chs.html">Ciências Humanas</a></li>
+                <li><a href="cnt.html">Ciências da Natureza</a></li>
+                <li><a href="lgg.html">Linguagens e Códigos</a></li>
+                <li><a href="mat.html">Matemática</a></li>
+                <li><a href="iot.html">IOT</a></li>
+                <li><a href="paginapessoal.html">Página Pessoal</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <div class="textos">
+        <section>
+            <h2>Olá esta é minha Página Inicial</h2>
+ 
+          <p>Bem-vindo ao meu site pessoal! Meu nome é Paulo e sou um aluno do ensino médio que está encerrando o curso de Internet das Coisas no Senac Nações Unidas. 
+            Neste site, você encontrará informações sobre os projetos que desenvolvi durante
+             minha jornada escolar, onde você poderá aprender sobre minhas habilidades e conhecimentos em programação, eletrônica e robótica</p>
+          <p>A Internet das Coisas é uma área fascinante que combina tecnologia, ciência e inovação. Meus projetos neste site refletem minha paixão por explorar novos conceitos e aplicá-los em soluções práticas.</p>
+          <p>Espero que você goste de explorar os projetos que desenvolvi e aprender mais sobre como a tecnologia pode ser usada para melhorar a nossa vida cotidiana. Se você tiver alguma dúvida ou quiser saber mais sobre algum projeto específico, não hesite em entrar em contato comigo.</p>
+          <p>Bem-vindo ao meu mundo de projetos!</p>
+        </div>
+        </section>
+      </main>
+<style>
+    header{
+        margin-top: 10px;
+    }
+ 
+body {
+ background-color: #e0e0e0;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+main > section > p:last-child {
+  margin-bottom: 0;
+}
+
+main > section > p {
+  text-align: justify;
+}
+
+main > section > h2 {
+  text-align: center;
+}
+
+main > section {
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  main > section {
+    width: 100%;
+  }
+}  
+/* Estilo básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Cor de texto escuro */
+}
+
+/* Cabeçalho */
+header {
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #000000;
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+margin-top: 20px ;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #555; /* Cor de fundo dos links */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #301ca7; /* Cor de destaque ao passar o mouse */
+}
+
+/* Main */
+main {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h2 {
+    color: #000000; /* Verde para os títulos */
+}
+
+/* Seções */
+section {
+    margin-bottom: 20px;
+}
+
+/* Links e botões */
+a {
+   justify-content: space-between; 
+    color: #000000; /* Cor verde para links */
+    text-decoration: none;
+}
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2b2566;
+    transform: scale(1.1, 1.15);
+}
+
+
+/* Imagens e vídeos */
+img, video {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra nas mídias */
+}
+.lista {
+    margin-top: 30px;
+}
+
+/* Media Query - Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+    }
+}
+
+    </style>
+</body>
+</html> 

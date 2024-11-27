@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do Saber - Ciências da Natureza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0e0e0;
+        }
+
+        header {
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .botao {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .botao:hover {
+            background-color: #2f4f2f;
+        }
+
+        .descricao {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .descricao h3 {
+            text-align: center;
+        }
+
+        .descricao p {
+            text-align: center;
+        }
+
+        .botao-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .atividade-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .atividade-container .botao {
+            margin-left: 20px; /* Espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Áreas do Saber - Ciências da Natureza</h1>
+        <h2>Por: Paulo Marcelo Ferreira Cerqueira</h2>
+    </header>
+
+    <table>
+        <tr>
+            <th>Área do Conhecimento</th>
+            <th>Professores</th>
+            <th>Matérias</th>
+        </tr>
+        <tr>
+            <td>Ciências da Natureza</td>
+            <td>Prof. Thaioa, Prof. Francisca, Prof. Robson</td>
+            <td>Física, Química, Biologia</td>
+        </tr>
+    </table>
+
+    <h2>Resumo das Matérias</h2>
+    <div class="botao-container">
+        <button class="botao" onclick="mostrarDescricao('fisica')">Saber mais sobre Física</button>
+        <button class="botao" onclick="mostrarDescricao('quimica')">Saber mais sobre Química</button>
+        <button class="botao" onclick="mostrarDescricao('biologia')">Saber mais sobre Biologia</button>
+    </div>
+
+    <div class="descricao" id="fisica">
+        <h3>Física</h3>
+        <p>A Física é a área da ciência dedicada ao estudo dos fenômenos naturais e do comportamento da matéria e da energia. Ela investiga desde as leis fundamentais da mecânica, que explicam o movimento dos corpos, até os mistérios da física quântica e da cosmologia, que exploram os limites do universo e as partículas subatômicas.</p>
+    </div>
+
+    <div class="descricao" id="quimica">
+        <h3>Química</h3>
+        <p>A Química é a ciência que analisa a composição, as propriedades e as transformações da matéria. Ela investiga os processos de reação entre diferentes substâncias, abrangendo áreas como a química inorgânica, que estuda os elementos e compostos não-orgânicos, a química orgânica, que explora os compostos do carbono, e a bioquímica, que analisa as reações químicas no contexto dos organismos vivos.</p>
+    </div>
+
+    <div class="descricao" id="biologia">
+        <h3>Biologia</h3>
+        <p>A Biologia é a ciência que se dedica ao estudo da vida e dos seres vivos. Ela abrange uma ampla gama de temas, desde a biologia celular, que estuda as estruturas e funções das células, até a ecologia, que analisa as interações entre os seres vivos e o meio ambiente, além da evolução, que investiga como as espécies se adaptam e mudam ao longo do tempo.</p>
+    </div>
+
+    <h2>Atividade Favorita</h2>
+    <div class="atividade-container">
+        <button class="botao" onclick="mostrarAtividade()">Atividade Favorita</button>
+    </div>
+
+    <div class="descricao" id="atividade">
+        <h3>Experiência em Laboratório</h3>
+        <p>Uma das minhas experiências mais memoráveis em Química durante o ensino médio foi o dia em que tivemos a oportunidade de ir ao laboratório e realizar a extração de DNA de um morango. Essa atividade foi fascinante e me proporcionou uma visão prática de conceitos que estudamos em sala de aula.</p>
+    </div>
+
+    <script>
+        function mostrarDescricao(id) {
+            // Esconde todas as descrições
+            var descricoes = document.querySelectorAll('.descricao');
+            descricoes.forEach(function(descricao) {
+                descricao.style.display = "none";
+            });
+
+            // Exibe a descrição da matéria clicada
+            var descricao = document.getElementById(id);
+            if (descricao.style.display === "none" || descricao.style.display === "") {
+                descricao.style.display = "block";
+            } else {
+                descricao.style.display = "none";
+            }
+        }
+
+        function mostrarAtividade() {
+            var atividade = document.getElementById("atividade");
+            if (atividade.style.display === "none" || atividade.style.display === "") {
+                atividade.style.display = "block";
+            } else {
+                atividade.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
