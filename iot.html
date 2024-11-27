@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas do Saber - Internet das Coisas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8;
+        }
+
+        header {
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e0e0e0;
+        }
+
+        .botao {
+            background-color: #007bff; /* Azul */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .botao:hover {
+            background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+        }
+
+        .descricao {
+            display: none;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .descricao h3 {
+            text-align: center;
+        }
+
+        .descricao p {
+            text-align: center;
+        }
+
+        .botao-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .atividade-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .atividade-container .botao {
+            margin-left: 20px; /* Espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Áreas do Saber - Internet das Coisas</h1>
+        <h2>Por: Paulo Marcelo Ferreira Cerqueira</h2>
+    </header>
+
+    <table>
+        <tr>
+            <th>Área do Conhecimento</th>
+            <th>Professores</th>
+            <th>Matérias</th>
+        </tr>
+        <tr>
+            <td>Internet das Coisas (IoT)</td>
+            <td>Prof. Glauco</td>
+            <td>Internet das Coisas</td>
+        </tr>
+    </table>
+
+    <h2>Resumo da Matéria</h2>
+    <div class="botao-container">
+        <button class="botao" onclick="mostrarDescricao('iot')">Saber mais sobre Internet das Coisas</button>
+    </div>
+
+    <div class="descricao" id="iot">
+        <h3>Internet das Coisas (IoT)</h3>
+        <p>A Internet das Coisas (IoT) refere-se à rede de objetos físicos que se conectam à internet para compartilhar dados e informações. A matéria envolve o estudo dos dispositivos inteligentes, sensores, comunicação de dados e automação, com o objetivo de criar soluções tecnológicas que melhorem a vida cotidiana, desde casas inteligentes até fábricas automatizadas.</p>
+    </div>
+
+    <h2>Atividade Favorita</h2>
+    <div class="atividade-container">
+        <button class="botao" onclick="mostrarAtividade()">Atividade Favorita</button>
+    </div>
+
+    <div class="descricao" id="atividade">
+        <h3>Construção de Dispositivos IoT</h3>
+        <p>Fizemos um carrinho remoto – uma atividade prática que integra tecnologia e criatividade, além de ensinar sobre programação e engenharia.</p>
+    </div>
+
+    <script>
+        function mostrarDescricao(id) {
+            // Esconde todas as descrições
+            var descricoes = document.querySelectorAll('.descricao');
+            descricoes.forEach(function(descricao) {
+                descricao.style.display = "none";
+            });
+
+            // Exibe a descrição da matéria clicada
+            var descricao = document.getElementById(id);
+            if (descricao.style.display === "none" || descricao.style.display === "") {
+                descricao.style.display = "block";
+            } else {
+                descricao.style.display = "none";
+            }
+        }
+
+        function mostrarAtividade() {
+            var atividade = document.getElementById("atividade");
+            if (atividade.style.display === "none" || atividade.style.display === "") {
+                atividade.style.display = "block";
+            } else {
+                atividade.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
